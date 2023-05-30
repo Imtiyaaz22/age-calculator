@@ -1,0 +1,41 @@
+:root {
+	--ff-text: "Changa", sans-serif;
+
+	--fw-light-300: 300;
+	--fw-med-500: 500;
+	--fw-bold-700: 700;
+
+	--fs-200: 1.6rem;
+	--fs-250: 2rem;
+	--fs-300: 3rem;
+
+	--color-primary: #3F826D;
+	--color-secondary: #545E75;
+	--color-accent: #C03221;
+	--color-bg-1: #F7F7FF;
+	--color-bg-2: #F2D0A4;
+	--color-grey: #333;
+
+	--img-size: 6rem;
+	--social-icon: 4rem;
+	--logo-icon: 3.5rem;
+
+	--border-sm: 1rem;
+
+	--spacer-sm: 2rem;
+	--spacer-md: 3rem;
+	--spacer-lg: 4rem;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
