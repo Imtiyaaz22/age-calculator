@@ -133,6 +133,24 @@ body {
 
 /* Output */
 .output {
-	grid-column: 2 / 4;
+	grid-column: 1 / -1;
 	grid-row: 3 / 4;
+	align-self: flex-start;
+	text-align: center;
+}
+
+.output-hidden {
+	/* display: none; */
+}
+
+.output-date {
+	font-size: var(--fs-300);
+	font-weight: var(--fw-300);
+	color: var(--color-grey);
+}	
+
+.output-text {
+	font-size: var(--fs-250);
+	font-weight: var(--fw-500);
+	color: var(--color-secondary);
 }
