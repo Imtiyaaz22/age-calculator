@@ -8,6 +8,7 @@
 	--fs-200: 1.6rem;
 	--fs-250: 2rem;
 	--fs-300: 3rem;
+	--fs-400: 4rem;
 
 	--color-primary: #3f826d;
 	--color-secondary: #545e75;
@@ -16,9 +17,7 @@
 	--color-bg-2: #f2d0a4;
 	--color-grey: #333;
 
-	--img-size: 6rem;
-	--social-icon: 4rem;
-	--logo-icon: 3.5rem;
+	--logo-icon: 4.5rem;
 
 	--border-sm: 1rem;
 
@@ -42,7 +41,7 @@ html {
 
 body {
 	font-family: var(--ff-text);
-	background-color: var(--color-bg-1);
+	background-color: var(--color-secondary);
 	width: 100vw;
 	height: 100vh;
 
@@ -52,7 +51,7 @@ body {
 }
 
 .container {
-	background-color: var(--color-bg-2);
+	background-color: var(--color-bg-1);
 	width: 75%;
 	height: 60%;
 
@@ -61,12 +60,35 @@ body {
 	grid-template-rows: repeat(3, 1fr);
 	justify-items: center;
 	align-items: center;
+
+	border-radius: var(--border-sm);
+	box-shadow: 3rem 3rem 6rem rgba(0, 0, 0, .25);
 }
 
 /* Header */
 .header {
 	grid-column: 2 / 4;
 	grid-row: 1 / 2;
+
+	display: flex;
+	align-items: center;
+	gap: var(--spacer-md);
+	
+	border-bottom: 2px solid var(--color-accent);
+}
+
+.header-icon {
+	width: var(--logo-icon);
+	height: var(--logo-icon);
+	color: var(--color-secondary);
+}
+
+.header-heading {
+	font-size: var(--fs-400);
+	font-weight: var(--fw-300);
+	color: var(--color-secondary);
+	text-transform: uppercase;
+	letter-spacing: .3rem;
 }
 
 /* Current */
