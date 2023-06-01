@@ -25,24 +25,19 @@
 			</header>
 
 			<section class="current">
-				<p class="current-date">Current Date: <span class="current-date__highlight">30 May 2023</span></p>
+				<p class="current-date">Current Date:</p>
 			</section>
 
 			<form class="capture">
 				<label for="captureDate" class="capture-label"
 					>Date of Birth:
-					<input type="date" class="capture-date" id="captureDate" />
+					<input type="date" class="capture-date" id="captureDate" required value="2023-06-02" />
 				</label>
-				<label for="captureBtn" class="capture-label"
-					>Calculate
-					<input type="button" class="capture-btn" id="captureBtn" />
-				</label>
+				<button class="capture-btn">Calculate</button>
 			</form>
 			<div class="output output-hidden">
 				<h2 class="output-date">Your age:</h2>
-				<p class="output-text">You are 23 years, 5 months and 23 days old!</p>
 			</div>
-			<!-- TODO: animation when clicked, shows a drop down with calculated age -->
 		</div>
 	</body>
 </html>
