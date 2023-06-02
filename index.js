@@ -6,9 +6,6 @@ const currentMonthEl = document.querySelector(".current-month");
 const currentYearEl = document.querySelector(".current-year");
 const currentDateContainer = document.querySelector(".current-date");
 
-const captureDate = document.querySelector(".capture-date");
-const calcBtn = document.querySelector(".capture-btn");
-
 const date = new Date();
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -31,8 +28,3 @@ window.addEventListener("load", () => {
         ;
   return currentDateContainer.insertAdjacentHTML("afterend", html);
 });
-
-// Get date of birth input
-
-console.log(captureDate.value);
-console.log(captureDate.textContent);
