@@ -63,7 +63,7 @@ body {
 	align-items: center;
 
 	border-radius: var(--border-sm);
-	box-shadow: 3rem 3rem 6rem rgba(0, 0, 0, .25);
+	box-shadow: 3rem 3rem 6rem rgba(0, 0, 0, 0.25);
 }
 
 /* Header */
@@ -74,7 +74,7 @@ body {
 	display: flex;
 	align-items: center;
 	gap: var(--spacer-md);
-	
+
 	border-bottom: 2px solid var(--color-accent);
 }
 
@@ -89,7 +89,7 @@ body {
 	font-weight: var(--fw-300);
 	color: var(--color-secondary);
 	text-transform: uppercase;
-	letter-spacing: .3rem;
+	letter-spacing: 0.3rem;
 }
 
 /* Current */
@@ -117,7 +117,7 @@ body {
 	text-transform: uppercase;
 }
 
-.current-date__highlight{
+.current-date__highlight {
 	display: block;
 	font-size: var(--fs-300);
 	font-weight: var(--fw-300);
@@ -152,9 +152,24 @@ body {
 	border-radius: var(--border-sm);
 	background-color: var(--color-secondary);
 	color: var(--color-bg-1);
-	padding: .8rem var(--spacer-sm);
+	padding: 0.8rem var(--spacer-sm);
 	width: 100%;
-	transition: all .8s;
+	transition: all 0.8s;
+	position: relative;
+}
+
+/* Allows calendar popup when clicked anywhere */
+.capture-date::-webkit-calendar-picker-indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	height: auto;
+	color: transparent;
+	background: transparent;
+	cursor: pointer;
 }
 
 .capture-date:focus-visible {
@@ -169,7 +184,7 @@ body {
 	width: 100%;
 	border: none;
 	border-radius: var(--border-sm);
-	padding: .8rem var(--spacer-sm);
+	padding: 0.8rem var(--spacer-sm);
 	background-color: var(--color-primary);
 	color: var(--color-bg-1);
 	font-family: inherit;
@@ -177,7 +192,7 @@ body {
 	font-weight: var(--fw-300);
 	text-transform: uppercase;
 	cursor: pointer;
-	transition: all 0.8s;
+	transition: all .8s;
 }
 
 .capture-btn:hover {
@@ -201,7 +216,7 @@ body {
 	font-size: var(--fs-300);
 	font-weight: var(--fw-300);
 	color: var(--color-grey);
-}	
+}
 
 .output-text {
 	font-size: var(--fs-250);
