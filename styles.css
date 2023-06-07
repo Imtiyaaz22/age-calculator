@@ -7,6 +7,7 @@
 
 	--fs-200: 1.6rem;
 	--fs-250: 2rem;
+	--fs-280: 2.5rem;
 	--fs-300: 3rem;
 	--fs-400: 4rem;
 
@@ -18,6 +19,8 @@
 	--color-grey: #333;
 
 	--logo-icon: 4.5rem;
+	--logo-icon-md: 3.5rem;
+	--logo-icon-xmd: 3rem;
 	--logo-icon-sm: 2.5rem;
 
 	--border-sm: 1rem;
@@ -192,7 +195,7 @@ body {
 	font-weight: var(--fw-300);
 	text-transform: uppercase;
 	cursor: pointer;
-	transition: all .8s;
+	transition: all 0.8s;
 }
 
 .capture-btn:hover {
@@ -222,4 +225,147 @@ body {
 	font-size: var(--fs-250);
 	font-weight: var(--fw-500);
 	color: var(--color-secondary);
+}
+
+/* Media Quesries */
+/* 1200px */
+@media screen and (max-width: 75em) {
+	html {
+		font-size: 56.25%;
+	}
+
+	.container {
+		width: 65%;
+		height: 55%;
+	}
+}
+/* 900px */
+@media screen and (max-width: 56.25em) {
+	.container {
+		width: 65%;
+		height: 65%;
+
+		grid-template-columns: 1fr repeat(2, 12.5rem) 1fr;
+	}
+
+	.header {
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+	}
+
+	.header-heading {
+		font-size: var(--fs-300);
+	}
+
+	.header-icon {
+		width: var(--logo-icon-md);
+		height: var(--logo-icon-md);
+	}
+
+	.current {
+		width: 60%;
+		height: 65%;
+	}
+
+	.current-weekday {
+		font-size: var(--fs-200);
+	}
+
+	.current-date__highlight {
+		font-size: var(--fs-250);
+	}
+
+	.capture {
+		justify-content: space-evenly;
+		height: 70%;
+		width: 60%;
+	}
+
+	.output-text {
+		font-size: var(--fs-200);
+	}
+}
+/* 600px */
+@media screen and (max-width: 37.5em) {
+	.container {
+		height: 85%;
+		width: 80%;
+
+		grid-template-rows: 20rem repeat(2, 1fr) 20rem;
+	}
+
+	.current {
+		grid-row: 2 / 3;
+		grid-column: 1 / -1;
+		align-self: baseline;
+	}
+
+	.capture {
+		grid-row: 3 / 4;
+		grid-column: 1 / -1;
+		align-self: baseline;
+		width: 50%;
+	}
+
+	.output {
+		grid-row: 4 / 5;
+		grid-column: 1 / -1;
+	}
+
+	.header-heading {
+		font-size: var(--fs-280);
+	}
+
+	.header-icon {
+		width: var(--logo-icon-xmd);
+		height: var(--logo-icon-xmd);
+	}
+
+	.current-date__hightlight {
+		font-size: var(--fs-280);
+	}
+
+	.output-date {
+		font-size: var(--fs-250);
+	}
+}
+/* 400px */
+@media screen and (max-width: 25em) {
+	html {
+		font-size: 50%;
+	}
+
+	.container {
+		height: 75%;
+		width: 75%;
+	}
+
+	.header {
+		grid-column: 2 / 4;
+		align-self: end;
+		gap: var(--spacer-sm);
+		flex-direction: column;
+	}
+
+	.header-icon {
+		width: var(--logo-icon-md);
+		height: var(--logo-icon-md);
+	}
+
+	.current {
+		grid-row: 2 / 3;
+		grid-column: 2 / 4;
+		align-self: center;
+	}
+
+	.capture {
+		grid-row: 3 / 4;
+		grid-column: 2 / 4;
+		width: 75%;
+	}
+
+	.output {
+		grid-row: 4 / 5;
+		grid-column: 2 / 4;
+	}
 }
