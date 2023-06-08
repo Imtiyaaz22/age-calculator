@@ -295,6 +295,11 @@ body,
 		width: 50%;
 	}
 
+	.capture-date{
+		width: 100%;
+		justify-content: space-evenly;
+	}
+
 	.output {
 		grid-row: 4 / 5;
 		grid-column: 1 / -1;
